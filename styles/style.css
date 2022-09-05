@@ -55,7 +55,7 @@
     gap: 18px;
 }
 
-.header__link {
+.header__lang-link {
     color: white;
     text-decoration: none;
     font-style: normal;
@@ -77,7 +77,7 @@
     
 }
 
-.lead__header {
+.lead__title {
     font-style: normal;
     font-weight: 900;
     font-size: 96px;
@@ -123,7 +123,7 @@
     padding-left: 12%;
 }
 
-.intro__header {
+.intro__title {
     font-style: normal;
     font-weight: 900;
     font-size: 54px;
@@ -154,11 +154,10 @@
 .photo-grid {
     padding: 0 48px 92px 48px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(284px, 352px));
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 16px;
     margin: 0 auto;
-    /* width: calc(100% - 92px); */
 }
 
 .photo-grid__item {
@@ -171,7 +170,7 @@
     margin: 0 auto;
 }
 
-.places__header {
+.place__title {
     font-style: normal;
     font-weight: 900;
     font-size: 72px;
@@ -179,27 +178,29 @@
     color: #FFFFFF;
     max-width: 440px;
     margin-right: 40px;
+    align-self: end;
 }
 
-.places__item {
+.place {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, minmax(152px, auto));
     row-gap: 48px;
     column-gap: 40px;
+    margin-bottom: 80px;
 }
 
 
-.places__image {
+.place__image {
     width: 100%;
     object-fit: cover;
 }
 
-.places__website {
+.place__website {
     align-self: end;
 }
 
-.places__url {
+.place__url-heading {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -207,9 +208,10 @@
     letter-spacing: 2px;
     color: #AAAAAA;
     margin-bottom: 12px;
+    text-transform: uppercase;
 }
 
-.places__link {
+.place__link {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -217,7 +219,7 @@
     color: #FFFFFF;
 }
 
-.places__text {
+.place__paragraph {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -227,25 +229,42 @@
 }
 
 .cover {
-    padding: 48px;
+    padding: 12px 48px 48px 48px;
     min-height: 740px;
 }
 
 
-.cover__image {
+.cover__background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     background: url(../images/cover__background.jpg) center center/cover;
-    max-height: 740px;
-    padding: 245px 0 245px 0;
+    min-height: 740px;
+    
+    /* padding: 245px 0 245px 0; */
 }
 
-.cover__hover {
-    max-height: 740px;
+.cover__background:hover .cover__overlay {
+    display: block;
+    
+}
+
+.cover__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
     background: #2A2C2F;
     opacity: 0.8;
+    /* transition: 5s; */
 }
 
-.cover__header {
+.cover__title {
+    position: relative;
+    z-index: 2;
     font-style: normal;
     font-weight: 900;
     font-size: 72px;
@@ -257,6 +276,8 @@
 }
 
 .cover__subtitle {
+    position: relative;
+    z-index: 2;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -264,7 +285,7 @@
     text-align: center;
     color: #FFFFFF;
     max-width: 360px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .footer {
@@ -294,7 +315,7 @@
     text-decoration: none;
 }
 
-.footer__copiright {
+.footer__copyright {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
