@@ -1,0 +1,12 @@
+.cover__background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: url(../images/cover__background.jpg) center center/cover no-repeat;
+    min-height: 740px;
+    }
+
+.cover__background:hover .cover__overlay {
+    opacity: 0.8;
+}
