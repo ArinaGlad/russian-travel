@@ -1,11 +1,10 @@
 .cover__overlay {
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: #2A2C2F;
-    opacity: 0;
-    transition: all 0.5s;
+    opacity: 0.8;
 }
